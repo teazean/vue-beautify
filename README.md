@@ -19,6 +19,8 @@ a formatter for vue module use [js-beautify](https://github.com/beautify-web/js-
 ###usage 
 
 **cli**
+
+use cli , it will output to the stio.
 	
 	vue-beautify test.js
 	vue-beautify ./src
