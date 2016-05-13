@@ -1,0 +1,25 @@
+{
+  "name": "vue-beautify",
+  "version": "1.0.0",
+  "description": "vue-beautifier for node",
+  "main": "src/vue-beautify.js",
+  "bin": {
+    "vue-beautify": "src/cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/teazean/vue-beautify.git"
+  },
+  "keywords": [
+    "beautify",
+    "vue",
+    "vue-beautify",
+    "vue-fomatter"
+  ],
+  "author": "teazean <zhanglei55@baidu.com>",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "js-beautify": "^1.6.2"
+  }
+}
