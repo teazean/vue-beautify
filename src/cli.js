@@ -1,3 +1,5 @@
+#! /usr/bin/env node
+
 var vueBeautify = require('./vue-beautify').dir;
 
 var paths = process.argv.slice(2);
