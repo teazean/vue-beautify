@@ -18,15 +18,17 @@ function beautifyVue (text, options) {
 	return result.substr(0, result.length - 2);
 }
 
-beautifyVue.dir = function(dirPath, filters) {
-	if(!filters) {
-		recurseDir(dirPath);
-	} else {
+beautifyVue.dir = function (dirPath, fn, filters) {
+	if (filters) {
 		if (typeof filters == 'string') {
 			filters = [filters];
 		}
-		recurseDir(dirPath, new RegExp('\.' + filters.join('|') + '$', 'ig'));
+		filters = new RegExp('\.' + filters.join('|') + '$', 'ig');
 	}
+
+	recurseDir(dirPath, function (data) {
+			fn(beautifyVue(data));
+		}, filters);
 }
 
 module.exports = beautifyVue;
