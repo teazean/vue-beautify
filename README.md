@@ -20,12 +20,10 @@ a formatter for vue module use [js-beautify](https://github.com/beautify-web/js-
 
 **cli**
 
-use cli , it will output to the stio.
+use cli , it will output the result to the stio.
 	
 	vue-beautify test.js
 	vue-beautify ./src
-	// or
-	vue-beautify test.js ./src
 
 **commonjs**
 	
@@ -42,13 +40,15 @@ use cli , it will output to the stio.
 			// the same as 'js-beautify' css options
 		}
 	}
-	fs.readFile(dirPath, 'utf8', function(err, data) {
+	fs.readFile(filePath, 'utf8', function(err, data) {
 		vueBeautify(data, options);
 	});
 
 	
 	var filters = ['vue', 'vue2']; // suffix
-	vueBeautify.dir('./src', filters, options);
+	vueBeautify.dir('./src', function (beautifiedData, filePath) {
+			console.log(beautifiedData);
+		}, filters, options);
 
 
 
