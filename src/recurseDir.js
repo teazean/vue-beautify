@@ -13,14 +13,14 @@ function recurseDir(dirPath, hander, filtersReg) {
 					} else {
 						files.forEach(function (file) {
 							var filePath = path.join(dirPath, file);
-							recurseDir(filePath, hander);
+							recurseDir(filePath, hander, filtersReg);
 						});
 					}
 				});
 			} else {
 				if (filtersReg && !filtersReg.test(dirPath)) {
 					return;
-				} 
+				}
 				fs.readFile(dirPath, 'utf8', function(err, data) {
 					if (err) {
 						throw new Error('read file: ' + dirPath + ' error');
