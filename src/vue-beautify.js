@@ -26,8 +26,8 @@ beautifyVue.dir = function (dirPath, fn, filters) {
 		filters = new RegExp('\.' + filters.join('|') + '$', 'ig');
 	}
 
-	recurseDir(dirPath, function (data) {
-			fn(beautifyVue(data));
+	recurseDir(dirPath, function (data, filepath) {
+			fn(beautifyVue(data), filepath);
 		}, filters);
 }
 

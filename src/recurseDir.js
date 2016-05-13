@@ -25,7 +25,7 @@ function recurseDir(dirPath, hander, filtersReg) {
 					if (err) {
 						throw new Error('read file: ' + dirPath + ' error');
 					}
-					hander(data);
+					hander(data, dirPath);
 				});
 			}
 		}
