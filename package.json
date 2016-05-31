@@ -1,6 +1,6 @@
 {
   "name": "vue-beautify",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "vue-beautifier for node",
   "main": "src/vue-beautify.js",
   "bin": {
