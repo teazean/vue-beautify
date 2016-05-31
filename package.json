@@ -1,6 +1,6 @@
 {
   "name": "vue-beautify",
-  "version": "1.0.7",
+  "version": "1.1.1",
   "description": "vue-beautifier for node",
   "main": "src/vue-beautify.js",
   "bin": {
@@ -18,7 +18,11 @@
   ],
   "author": "teazean <zhanglei55@baidu.com>",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "config-chain": "~1.1.5",
+    "mkdirp": "~0.5.0",
+    "nopt": "~3.0.1"
+  },
   "devDependencies": {
     "js-beautify": "^1.6.2"
   },
